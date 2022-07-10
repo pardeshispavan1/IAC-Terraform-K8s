@@ -19,7 +19,7 @@ resource "kubernetes_deployment" "sample-nodejs" {
       }
       spec {
         container {
-          image = "megathorx/knote-js"
+          image = "megathorx/knote-js:1.0.0"
           name  = "sample-nodejs-container"
           port {
             container_port = 80

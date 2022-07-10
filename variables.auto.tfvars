@@ -1,0 +1,10 @@
+gcp_credentials = "potent-impulse-352917-9fca80f67134.json"
+gcp_project_id = "potent-impulse-352917"
+gcp_region = "us-west1"
+gke_zones = ["us-west1-a"]
+gke_regional = "false"
+gke_network = "default"
+gke_subnetwork = "default"
+gke_service_account_name = "k8s-cluster-sa@potent-impulse-352917.iam.gserviceaccount.com"
+gke-default-noodepool-name = "my-nodepool"
+gcp_cluster_name = "k8s"

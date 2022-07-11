@@ -2,7 +2,7 @@
 resource "kubernetes_deployment" "sample-nodejs" {
   metadata {
     name      = "sample-nodejs"
-    namespace = default.sample-nodejs.metadata.0.name
+    namespace = kubernetes_namespace.sample-nodejs.metadata.0.name
   }
   spec {
     replicas = 2
@@ -39,7 +39,7 @@ resource "kubernetes_deployment" "sample-nodejs" {
 resource "kubernetes_deployment" "mongo" {
   metadata {
     name      = "mongo"
-    namespace = default.sample-nodejs.metadata.0.name
+    namespace = kubernetes_namespace.sample-nodejs.metadata.0.name
   }
   spec {
     replicas = 1

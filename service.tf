@@ -2,11 +2,11 @@
 resource "kubernetes_service" "sample-nodejs" {
   metadata {
     name      = "sample-nodejs"
-    namespace = default.sample-nodejs.metadata.0.name
+    namespace = kubernetes_namespace.sample-nodejs.metadata.0.name
   }
   spec {
     selector = {
-      app = default.sample-nodejs.spec.0.template.0.metadata.0.labels.app
+      app = kubernetes_namespace.sample-nodejs.spec.0.template.0.metadata.0.labels.app
     }
     type = "LoadBalancer"
     port {
@@ -19,11 +19,11 @@ resource "kubernetes_service" "sample-nodejs" {
 resource "kubernetes_service" "mongo" {
   metadata {
     name      = "mongo"
-    namespace = default.sample-nodejs.metadata.0.name
+    namespace = kubernetes_namespace.sample-nodejs.metadata.0.name
   }
   spec {
     selector = {
-      app = default.mongo.spec.0.template.0.metadata.0.labels.app
+      app = kubernetes_namespace.mongo.spec.0.template.0.metadata.0.labels.app
     }
     type = "ClusterIP"
     port {

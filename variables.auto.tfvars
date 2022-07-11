@@ -1,4 +1,4 @@
-gcp_credentials = "$project-id"
+gcp_credentials = "potent-impulse-352917-9fca80f67134.json"
 gcp_project_id = "potent-impulse-352917"
 gcp_region = "us-west1"
 gke_zones = ["us-west1-a"]

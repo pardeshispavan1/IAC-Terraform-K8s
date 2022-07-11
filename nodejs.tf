@@ -1,4 +1,4 @@
-resource "kubernetes_namespace" "sample-nodejs" {
+resource "default" "sample-nodejs" {
   metadata {
     name = "sample-nodejs"
   }

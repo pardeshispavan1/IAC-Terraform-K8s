@@ -29,7 +29,7 @@ node_pools = [
       auto_upgrade              = true
       service_account           = var.gke_service_account_name
       preemptible               = true
-      initial_node_count        = 1
+      initial_node_count        = 2
     },
   ]
 

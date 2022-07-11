@@ -6,7 +6,7 @@ resource "kubernetes_service" "sample-nodejs" {
   }
   spec {
     selector = {
-      app = kubernetes_namespace.sample-nodejs.spec.0.template.0.metadata.0.labels.app
+      app = kubernetes_deployment.sample-nodejs.spec.0.template.0.metadata.0.labels.app
     }
     type = "LoadBalancer"
     port {
@@ -23,7 +23,7 @@ resource "kubernetes_service" "mongo" {
   }
   spec {
     selector = {
-      app = kubernetes_namespace.mongo.spec.0.template.0.metadata.0.labels.app
+      app = kubernetes_deployment.mongo.spec.0.template.0.metadata.0.labels.app
     }
     type = "ClusterIP"
     port {

@@ -5,7 +5,7 @@ resource "kubernetes_deployment" "sample-nodejs" {
     namespace = kubernetes_namespace.sample-nodejs.metadata.0.name
   }
   spec {
-    replicas = 2
+    replicas = 3
     selector {
       match_labels = {
         app = "sample-nodejs"
